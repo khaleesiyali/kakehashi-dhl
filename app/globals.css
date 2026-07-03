@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --navy:       #0F1B2D;
+  --navy-2:     #1A2E45;
+  --navy-3:     #16324A;
+  --teal:       #00B4A6;
+  --teal-dark:  #007B72;
+  --gold:       #F4B942;
+  --offwhite:   #F8FAFC;
+  --blue-muted: #A0B8C8;
+  --blue-muted-2: #C5D8E8;
+  --rose:       #FF8A8A;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--offwhite);
+  min-height: 100vh;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--navy-3);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--teal);
+  cursor: pointer;
+}
+
+input[type="range"].danger::-webkit-slider-thumb {
+  background: var(--rose);
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23A0B8C8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 40px !important;
+}
+
+select option {
+  background-color: var(--navy-2);
+  color: var(--offwhite);
+}
