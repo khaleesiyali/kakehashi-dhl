@@ -310,7 +310,7 @@ export default function LandingHero() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/kakehashi-logo.svg" alt="KAKEHASHI" style={{ height: "24px", width: "auto" }} />
           <p className="text-xs" style={{ color: "var(--blue-muted)" }}>
-            © 2026 Kakehashi 
+            © 2026 Kakehashi Intiative
           </p>
         </div>
       </footer>

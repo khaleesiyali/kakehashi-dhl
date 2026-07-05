@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "KAKEHASHI — Shared Logistics Network",
   description:
     "Privacy-preserving shared freight corridor for Japan's trunk logistics.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
