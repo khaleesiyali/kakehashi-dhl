@@ -29,16 +29,20 @@ export default function Navbar() {
         borderBottom: "1px solid var(--navy-2)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="shrink-0">
+      <div className="h-16 flex items-center relative">
+        {/* Logo — same width as the sidebar so it sits centered above it */}
+        <Link
+          href="/"
+          className="shrink-0 flex items-center justify-center"
+          style={{ width: "240px" }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/kakehashi-logo.svg" alt="KAKEHASHI" style={{ height: "28px", width: "auto" }} />
         </Link>
 
-        {/* Center nav links — hidden on dashboard (sidebar handles nav) */}
+        {/* Center nav links — absolutely centered in the full navbar */}
         {!isDashboard && (
-          <div className="hidden md:flex items-center gap-8">
+          <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8">
             {[
               { label: "Home", href: "/" },
               { label: "Network", href: "/#network" },
@@ -50,12 +54,8 @@ export default function Navbar() {
                 href={href}
                 className="text-sm transition-colors"
                 style={{ color: "var(--blue-muted)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "var(--offwhite)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "var(--blue-muted)";
-                }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--offwhite)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "var(--blue-muted)"; }}
               >
                 {label}
               </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
         )}
 
         {/* Right side — auth */}
-        <div className="flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-3 pr-6">
           {user ? (
             <>
               <span className="text-sm hidden sm:block" style={{ color: "var(--blue-muted)" }}>

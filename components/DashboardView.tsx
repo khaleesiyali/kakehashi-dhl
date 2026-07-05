@@ -154,7 +154,7 @@ export default function DashboardView({
               <CartesianGrid strokeDasharray="3 3" stroke="#16324A" />
               <XAxis dataKey="corridor" tick={{ fill: "#A0B8C8", fontSize: 10 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: "#A0B8C8", fontSize: 11 }} axisLine={false} tickLine={false} domain={[0, 100]} />
-              <Tooltip contentStyle={TOOLTIP_STYLE} formatter={(v) => [`${v}%`]} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} formatter={(v) => [`${v}%`]} cursor={false} />
               <Legend wrapperStyle={{ fontSize: "11px", color: "#A0B8C8" }} />
               <Bar dataKey="before" name="Before" fill="#3B6A8E" radius={[3, 3, 0, 0]} activeBar={{ fill: "#4D84A8" }} />
               <Bar dataKey="after"  name="After"  fill="#00B4A6" radius={[3, 3, 0, 0]} activeBar={{ fill: "#33D4C4" }} />
