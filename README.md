@@ -108,16 +108,3 @@ lib/
 
 ---
 
-## Deploying to Vercel
-
-```bash
-npm run build   # verify build passes locally
-```
-
-Then connect the GitHub repository to [vercel.com](https://vercel.com) and deploy. No environment variables required — all data is static/seeded for the demo.
-
----
-
-## Research Context
-
-This prototype was developed for the **Kakehashi Data Mining Project** at Waseda University (2025–2026), exploring how Catena-X-style data governance can be applied to Japan's logistics industry to address the 2024 Problem — the labour and carbon crisis facing Japanese freight carriers.
