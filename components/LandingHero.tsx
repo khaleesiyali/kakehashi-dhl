@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 const STATS = [
-  { value: "38%", label: "Driver shortfall by 2030" },
+  { value: "34%", label: "Driver shortfall by 2030" },
   { value: "88.8%", label: "Freight moved by truck" },
   { value: "40%", label: "Average truck load factor" },
   { value: "28%", label: "CO₂ reduction in JPIC pilot" },
